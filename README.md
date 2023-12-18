@@ -5,31 +5,28 @@
   </p>
 </p>
 <p align="center">
-<a href="https://twitter.com/kolbysisk" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@kolbysisk-e57060.svg" alt="Created by Kolby Sisk"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-route-handler-pipe" alt="License"></a>
+  <a href="https://twitter.com/kolbysisk" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@kolbysisk-e57060.svg" alt="Created by Kolby Sisk"></a>
+  <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-route-handler-pipe" alt="License"></a>
 </p>
-
-<br/>
-<br/>
 
 ## Introduction
 
 Piping functions allows us to abstract reusable code that runs before the route handler is invoked.
 
-#### Example uses:
+### Example uses:
 
-✅ Validate body/query data
-🔒 Verifying signatures
-🪝 Catch errors
-✨ Add data to the `req` object
+- ✅ Validate body/query data
+- 🔒 Verifying signatures
+- 🪝 Catch errors
+- ✨ Add data to the `req` object
 
 ## Getting started
 
-#### 1. Install'r
+### 1. Install'r
 
 `npm i next-route-handler-pipe`
 
-#### 2. Create a pipe function
+### 2. Create a pipe function
 
 A pipe function is a function that accepts `req`, `event`, and `next`. It should return `await next()` when done, or return a `NextResponse`.
 
@@ -47,7 +44,7 @@ export const withUser: PipeFunction<{ userId: string }> = async (req, event, nex
 };
 ```
 
-#### 3. Create a pipe
+### 3. Create a pipe
 
 Import the `pipe` function and pass it pipe functions followed by a handler. If a pipe function adds data to the req you can compose an intersection type with `NextRequest` & the added data.
 
@@ -63,7 +60,7 @@ export const POST = pipe(withUser, handler);
 
 ## Examples
 
-#### validateBody
+### validateBody
 
 Combine with Zod to create an awesome validation pattern.
 
@@ -125,7 +122,7 @@ async function handler(req: NextRequest & { data: Post }) {
 export const POST = pipe(validateBody(postSchema), handler);
 ```
 
-#### catchErrors
+### catchErrors
 
 We can also perform actions with inner pipe functions. In this example we wrap the inner pipe functions in a try catch, allowing us to catch any errors that bubble up.
 
