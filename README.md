@@ -9,16 +9,21 @@
   <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-route-handler-pipe" alt="License"></a>
 </p>
 
+> ⚠️ This package is for projects using Next.js App Router. For projects using Pages Router see [next-api-route-middleware](https://github.com/KolbySisk/next-api-route-middleware).
+
 ## Introduction
 
 Piping functions allows us to abstract reusable code that runs before the route handler is invoked.
 
 ### Example uses:
 
-- ✅ Validate body/query data
-- 🔒 Verifying signatures
-- 🪝 Catch errors
-- ✨ Add data to the `req` object
+✅ Validate body/query data
+
+🔒 Verifying signatures
+
+🪝 Catch errors
+
+✨ Add data to the `req` object
 
 ## Getting started
 
