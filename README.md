@@ -113,7 +113,7 @@ postSchema.transform(({postId, postTitle, authorName}) => {
 })
 
 // Infer type from schema
-type Post = z.infer<typeof schema>;
+type Post = z.infer<typeof postSchema>;
 
 // Add intersection with `NextRequest` & your inferred type
 async function handler(req: NextRequest & { data: Post }) {
