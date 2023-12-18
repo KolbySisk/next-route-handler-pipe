@@ -1,6 +1,6 @@
 {
   "name": "next-route-handler-pipe",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": "kolbysisk",
   "license": "MIT",
   "description": "Pipe together functions to create reusable function pipelines for your Next.js route handlers.",
@@ -18,7 +18,8 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts"
+    "build": "tsup src/index.ts",
+    "deploy": "npm run build && npm publish"
   },
   "peerDependencies": {
     "next": ">=13"
