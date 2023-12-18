@@ -6,7 +6,7 @@
 </p>
 <p align="center">
   <a href="https://twitter.com/kolbysisk" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@kolbysisk-e57060.svg" alt="Created by Kolby Sisk"></a>
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-route-handler-pipe" alt="License"></a>
+  
 </p>
 
 > ⚠️ This package is for projects using Next.js App Router. For projects using Pages Router see [next-api-route-middleware](https://github.com/KolbySisk/next-api-route-middleware).
