@@ -17,13 +17,10 @@ Piping functions allows us to abstract reusable code that runs before the route 
 
 ### Example uses:
 
-✅ Validate body/query data
-
-🔒 Verifying signatures
-
-🪝 Catch errors
-
-✨ Add data to the `req` object
+- ✅ Validate body/query data
+- 🔒 Verifying signatures
+- 🪝 Catch errors
+- ✨ Add data to the `req` object
 
 ## Getting started
 
