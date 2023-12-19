@@ -1,13 +1,12 @@
 <p align="center">
   <h1 align="center">next-route-handler-pipe</h1>
   <p align="center">
-    Laying down pipe for your <a href="https://nextjs.org/docs/app/building-your-application/routing/route-handlers" rel="nofollow">Next.js Route Handlers.</a>
+    <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*iEaKA8z_dgcbF6Qfzbk5Sg.png" />
   </p>
 </p>
 <p align="center">
   <a href="https://twitter.com/kolbysisk" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@kolbysisk-e57060.svg" alt="Created by Kolby Sisk"></a>
   <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/kolbysisk/next-route-handler-pipe" alt="License"></a>
-  
 </p>
 
 > ⚠️ This package is for projects using Next.js App Router. For projects using Pages Router see [next-api-route-middleware](https://github.com/KolbySisk/next-api-route-middleware).
