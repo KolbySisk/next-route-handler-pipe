@@ -98,19 +98,20 @@ export const validateBody = (zodSchema: z.ZodSchema): PipeFunction<{ data: any }
 // route.ts
 
 // Create a Zod schema
-const postSchema = z.object({
-  postId: z.string(),
-  postTitle: z.string(),
-  authorName: z.string(),
-});
+const postSchema = z
+  .object({
+    postId: z.string(),
+    postTitle: z.string(),
+    authorName: z.string(),
+  })
 
-// We can even add a Zod transform if we need
-postSchema.transform(({postId, postTitle, authorName}) => {
-  post_id: postId,
-  post_title: postTitle,
-  author_first_name: authorName.split(' ')[0],
-  author_last_name: authorName.split(' ')[1]
-})
+  // We can even add a Zod transform if we need
+  .transform(({ postId, postTitle, authorName }) => ({
+    post_id: postId,
+    post_title: postTitle,
+    author_first_name: authorName.split(' ')[0],
+    author_last_name: authorName.split(' ')[1],
+  }));
 
 // Infer type from schema
 type Post = z.infer<typeof postSchema>;

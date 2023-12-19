@@ -1,6 +1,6 @@
 {
   "name": "next-route-handler-pipe",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "kolbysisk",
   "license": "MIT",
   "description": "Pipe together functions to create reusable function pipelines for your Next.js route handlers.",
