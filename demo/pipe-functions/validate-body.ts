@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-import { PipeFunction } from '../../../src/types';
+import { PipeFunction } from '../../src/types';
 
 export const validateBody = (zodSchema: z.ZodSchema): PipeFunction<{ data: any }> => {
   return async function (req, event, next) {

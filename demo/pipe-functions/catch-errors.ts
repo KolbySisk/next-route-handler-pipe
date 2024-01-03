@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { PipeFunction } from '../../../src/types';
+import { PipeFunction } from '../../src/types';
 
 export const catchErrors: PipeFunction = async (req, event, next) => {
   try {

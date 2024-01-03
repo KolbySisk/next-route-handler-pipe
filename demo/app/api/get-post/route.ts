@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
-import { pipe } from '../../../../../src/pipe';
+import { pipe } from '../../../../src/pipe';
 import { catchErrors } from '@/pipe-functions/catch-errors';
 import { validateQuery } from '@/pipe-functions/validate-query';
 
