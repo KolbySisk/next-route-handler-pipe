@@ -2,7 +2,7 @@ import { NextFetchEvent, NextRequest } from 'next/server';
 
 import { Next, PipeFunctionOrHandler } from './types';
 
-export function pipe(...pipeFunctions: PipeFunctionOrHandler[]) {
+export function pipe(...pipeFunctions: PipeFunctionOrHandler<any>[]) {
   return async function internalHandler(req: NextRequest, event: NextFetchEvent) {
     return await startPiping(req, event, pipeFunctions, 0);
   };
@@ -11,7 +11,7 @@ export function pipe(...pipeFunctions: PipeFunctionOrHandler[]) {
 async function startPiping(
   req: NextRequest,
   event: NextFetchEvent,
-  pipeFunctions: PipeFunctionOrHandler[],
+  pipeFunctions: PipeFunctionOrHandler<any>[],
   currentPipeFunctionIndex: number
 ) {
   const next: Next = async () => {
