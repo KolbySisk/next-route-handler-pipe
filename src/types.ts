@@ -1,23 +1,25 @@
-import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 export type Next = () => Promise<NextResponse | void>;
+
+export type Params = Record<'params', any>;
 
 export type Handler<AdditionalReqProperties = void> = (
   req: NextRequest & AdditionalReqProperties
 ) => NextResponse | Promise<NextResponse>;
 
-export type HandlerWithEvent<AdditionalReqProperties = void> = (
+export type HandlerWithParams<AdditionalReqProperties = void> = (
   req: NextRequest & AdditionalReqProperties,
-  event: NextFetchEvent
+  params: Params
 ) => NextResponse | Promise<NextResponse>;
 
 export type PipeFunction<AdditionalReqProperties = void> = (
   req: NextRequest & AdditionalReqProperties,
-  event: NextFetchEvent,
+  params: Params | undefined,
   next: Next
 ) => Promise<NextResponse | void>;
 
 export type PipeFunctionOrHandler<AdditionalReqProperties> =
   | Handler<AdditionalReqProperties>
-  | HandlerWithEvent<AdditionalReqProperties>
+  | HandlerWithParams<AdditionalReqProperties>
   | PipeFunction<AdditionalReqProperties>;

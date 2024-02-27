@@ -5,6 +5,10 @@ export default function Home() {
     fetch('/api/get-post?postId=123&postAuthor=joe-m').then((res) => res.json().then((d) => alert(JSON.stringify(d))));
   }
 
+  function handleGetPostWithParam() {
+    fetch('/api/with-param/123/joe-m').then((res) => res.json().then((d) => alert(JSON.stringify(d))));
+  }
+
   function handleGetPostWithInvalidQuery() {
     fetch('/api/get-post?postId=123&postName=joe-m').then((res) => res.json().then((d) => alert(JSON.stringify(d))));
   }
@@ -36,6 +40,7 @@ export default function Home() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
       <button onClick={handleGetPost}>Run get-post example</button>
+      <button onClick={handleGetPostWithParam}>Run get-post with param example</button>
       <button onClick={handleGetPostWithInvalidQuery}>Run get-post with invalid query example</button>
       <button onClick={handleCreatePost}>Run create-post example</button>
       <button onClick={handleCreatePostWithInvalidBody}>Run create-post with invalid body example</button>

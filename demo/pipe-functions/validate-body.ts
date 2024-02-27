@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { PipeFunction } from '../../src/types';
 
 export const validateBody = (zodSchema: z.ZodSchema): PipeFunction<{ data: any }> => {
-  return async function (req, event, next) {
+  return async function (req, params, next) {
     const body = await req.json();
     const validation = zodSchema.safeParse(typeof body === 'object' ? body : JSON.parse(body));
 
